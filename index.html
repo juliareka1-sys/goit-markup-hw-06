@@ -31,19 +31,24 @@
                 <li class ="address-item"><a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
             </ul>
         </address>
+        <button class="burger-btn" type="button">
+            <svg class="brg-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-burger-btn"></use>
+            </svg>
+        </button>
         </div>
     </header> 
     
     <main>
         
-        <section class="hero-section">
+     <section class="hidden hero-section">
             <div class="container">
             <h1 class="hero-title">Effective Solutions for Your Business</h1>
             <button class="hero-button" data-modal-open type="button">Order Service</button>
             </div>
         </section>
         
-        <section class="section features-section">
+        <section class="hidden section features-section">
             <div class="container">
             <h2 class="features-header visually-hidden">Our Features</h2>
             <ul class="features-list">
@@ -91,7 +96,7 @@
             </div>
         </section>
 
-        <section class="section team-section">
+        <section class="hidden section team-section">
             <div class="container">
             <h2 class="team-header">Our Team</h2>
             <ul class="team-list">
@@ -235,7 +240,7 @@
             </ul>
             </div>
         </section>
-        <section class="section portfolio-section"> 
+        <section class="hidden section portfolio-section"> 
             <div class="container portfolio-container">
             <h2 class="portfolio-section-header">Our Portfolio</h2>
             <ul class="portfolio-list">
@@ -309,7 +314,7 @@
             </div>
              </section>
     </main>
-    <footer class="footer">
+    <footer class="hidden footer">
         <div class="container footer-container">
             <div class="footer-info">
         <a class="logo footer-logo" href="./index.html">WEB<span class="logo-part">STUDIO</span></a>
@@ -344,8 +349,9 @@
             </li></ul>
     </div>
     <div class="footer-input-field">
-        <p class="footer-input-text">Subscribe</p>
+        
         <form class="footer-form">
+            <p class="footer-input-text">Subscribe</p>
             <input 
             class="footer-subs-field"
             type="email"
@@ -363,7 +369,7 @@
     </div>
 </footer>
 
-<div class="backdrop" data-modal>
+<div class=" hidden backdrop" data-modal>
     <div class="modal-form">
         <button class="modal-close-btn" type="button" data-modal-close>
             <svg class="close-icon" width="8" height="8">
@@ -440,6 +446,59 @@
                 <button type="submit" class="modal-submit-btn">Send</button> 
             </form>
     </div>
+</div>
+<div class="mobile-menu is-open">
+    <div class="mob-menu-container">
+   <button 
+   class="mobmenu-close-btn"
+   type="button">
+<svg class="mobmenu-close-icon" width="8" height="8">
+  <use href="./images/icons.svg#icon-close"></use>
+</svg>
+</button>
+<ul class="mob-menu-nav">
+    <li class="mob-menu-item"><a class="mobmenu-link current" href="./index.html">Studio</a></li>
+    <li class="mob-menu-item"><a class="mobmenu-link" href="#">Portfolio</a></li>
+    <li class="mob-menu-item"><a class="mobmenu-link" href="#">Contacts</a></li>
+</ul>
+</div>
+   <ul class="mobmenu-contact">
+    <li class ="mobmenu-address-item"><a class="address-link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+    <li class ="mobmenu-address-item"><a class="address-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+   </ul>
+   <ul class="mobmenu-socials">
+    <li>
+        <a href="https://www.instagram.com/" target="_blank" class="link-socials" rel="noopener noreferrer">
+            <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.twitter.com/" target="_blank" class="link-socials" rel="noopener noreferrer">
+            <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.facebook.com/" target="_blank" class="link-socials" rel="noopener noreferrer">
+            <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a href="https://www.linkedin.com/" target="_blank" class="link-socials" rel="noopener noreferrer">
+            <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+            </svg>
+        </a>
+    </li>
+
+
+   </ul>
+
 </div>
 <script src="./js/modal.js"></script>
 </body>
