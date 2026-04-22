@@ -2,6 +2,7 @@ body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 .hidden{
@@ -61,6 +62,7 @@ button{
 /*------COMMON---*/
 
 .container {
+    width: 100%;
     max-width: 320px;
     padding:0 16px;
     margin: 0 auto; 
@@ -246,57 +248,58 @@ margin-right: 76px;
 /*----HEADER MOB MENU---*/
 
 .mobile-menu {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #fff;
-opacity: 0;
-visibility: hidden;
-pointer-events: none;
-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-            visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
-.mobile-menu.is-open{
- opacity: 1; 
- visibility: visible; 
- pointer-events: auto;
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
-.mob-menu-container{
-  position: relative;  
-  padding-top: 72px;
-  padding-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.mob-menu-container {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .mobmenu-close-btn {
-position: absolute;
-top: 24px;
-right: 24px;
-width: 24px;
-height: 24px;
-background: #E7E9FC;
-cursor: pointer;
-border-radius: 50%;
-order: 1px solid rgba(0, 0, 0, 0.1);
-display: flex;
-justify-content: center;
-align-items: center;
-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    background: #E7E9FC;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobmenu-close-btn:hover,
 .mobmenu-close-btn:focus {
-background-color: #404bbf;
+    background-color: #404bbf;
 }
 
-.mobmenu-close-btn:hover .close-icon,
-.mobmenu-close-btn:focus .close-icon {
+.mobmenu-close-btn:hover .mobmenu-close-icon,
+.mobmenu-close-btn:focus .mobmenu-close-icon {
     fill: #ffffff;
 }
 
@@ -305,30 +308,68 @@ background-color: #404bbf;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
-.mob-menu-nav{
-
-}
-.mob-menu-item{
-
+.mob-menu-nav {
+    margin-bottom: auto;
 }
 
-.mob-menu-socials{}
-    /*fill: #f4f4fd;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-color: #4d5ae5;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}/*
+.mob-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.mobmenu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobmenu-link.current,
+.mobmenu-link:hover,
+.mobmenu-link:focus {
+    color: #404bbf;
+}
+
+.mob-menu-address {
+    font-style: normal;
+    margin-bottom: 48px;
+}
+
+.mobmenu-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mobmenu-address-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobmenu-address-link:hover,
+.mobmenu-address-link:hover,
+.mobmenu-address-link.current {
+    color: #404bbf;
+}
+
+.mob-menu-socials {
+    display: flex;
+    gap: 40px;
+    padding-top: 8px;
+}
 
 @media screen and (min-width: 768px) {
-    .mobile-menu{
+    .mobile-menu {
         display: none;
     }
-    
+
 }
 
 /*-------HERO MOB--------*/
@@ -1219,9 +1260,11 @@ gap: 24px;
 }
 
 /*--------MODAL TAB-----*/
+
 @media screen and (min-width: 768px) {
     .modal-form {
         width: 408px;
         padding: 72px 24px 24px;
     }
 }
+
