@@ -981,6 +981,7 @@ align-items: flex-start;
 
 .footer-socials-box {
 align-items: flex-start;
+margin-left: 24px;
   }
 
 .socials-text {
