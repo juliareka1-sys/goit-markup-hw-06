@@ -454,3 +454,17 @@ img {
 }
 
 
+.footer {
+    padding: 96px 0;
+}
+
+@media screen and (min-width: 1158px) {
+    .footer {
+        padding: 100px 0;
+    }
+}
+
+.mob-menu-socials {
+    gap: 24px;
+    flex-wrap: wrap;
+}
